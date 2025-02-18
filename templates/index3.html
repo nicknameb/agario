@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgarIoClone</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="startScreen">
+        <input type="text" id="playerName" placeholder="Enter your name" />
+        <button id="startButton">Start Game</button>
+    </div>
+    <div id="endScreen" style="display:none;">
+        <h1>Game Over</h1>
+        <p>Your score: <span id="finalScore"></span></p>
+    </div>
+    <canvas id="gameCanvas" style="display:none;"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
